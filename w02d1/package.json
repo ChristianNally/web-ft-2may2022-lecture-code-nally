@@ -1,23 +1,24 @@
 {
-  "name": "w02d1",
+  "name": "salutations",
   "version": "1.0.0",
-  "description": "code that exemplifies testing, assertions and test driven development",
+  "description": "This code will help you with your salutation etiquette.",
   "main": "hello-world.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "keywords": [
-    "TDD",
-    "testing",
-    "mocha",
-    "chai",
     "LHL",
-    "Bootcamp"
+    "TDD",
+    "mocha",
+    "chai"
   ],
-  "author": "me",
+  "author": "Nally",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^8.3.2"
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
   }
 }
