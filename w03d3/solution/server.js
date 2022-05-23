@@ -5,20 +5,23 @@
 
 const express = require("express");
 const PORT = 8080;
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser"); // 
 const cookieParser = require("cookie-parser");
 
 const app = express();
 
 app.set("view engine", "ejs");
 
-let users = {'nally': "qwerty"};
+let users = {
+  'nally': "qwerty",
+  'monkey': 'fuzz'
+};
 
 //
 // MIDDLEWARE
 //
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false })); //
 app.use(cookieParser());
 
 //
@@ -37,8 +40,9 @@ app.get("/register", (req, res) => {
 
 // register submit handler
 app.post("/register", (req, res) => {
-  users[req.body.username] = req.body.password;
-  console.log(JSON.stringify(users));
+  console.log('req.body',req.body);
+  users[req.body.username] = req.body.password; // FORM VALUES
+  console.log(JSON.stringify(users), JSON.stringify(users));
   res.cookie("user",req.body.username);
   res.redirect('/profile');
 });
