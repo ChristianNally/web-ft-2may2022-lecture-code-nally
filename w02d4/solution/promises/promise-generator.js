@@ -1,7 +1,7 @@
 
-const returnPromise = (value, delay = 1000) => {
+const returnPromise = (textLabel, delay = 1000) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(`yay! resolved!: ${value}`), delay);
+    setTimeout(() => resolve(`yay! resolved!: ${textLabel}`), delay);
   });
 };
 
